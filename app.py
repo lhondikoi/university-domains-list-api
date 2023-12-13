@@ -6,8 +6,13 @@ import uuid
 import requests
 import time
 import re
+from flask_cors import CORS
 
 app = Flask(__name__)
+cors = CORS(app,
+            resources={
+                r"/": {"origins": "https://netlify.app"}
+            })
 
 data = list()
 country_index = defaultdict(list)
