@@ -11,7 +11,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 cors = CORS(app,
             resources={
-                r"/": {"origins": "*"}
+                r"/search": {"origins": "*"}
             })
 
 data = list()
